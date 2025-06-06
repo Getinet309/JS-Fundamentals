@@ -1,8 +1,9 @@
 const args = process.argv.slice(2);
 
-if (args.length < 2) {
-  console.log('Usage: node script.js <arg1> <arg2>');
+if (args.length === 1) {
+  console.log(`${args[0]} is cool`);
+} else if (args.length >= 2) {
+  console.log(`${args[0]} is ${args[1]}`);
 } else {
-  const [arg1, arg2] = args;
-  console.log(`${arg1} is ${arg2}`);
+  console.log('Usage: node script.js <arg1> [arg2]');
 }
